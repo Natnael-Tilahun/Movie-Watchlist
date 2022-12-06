@@ -8,7 +8,7 @@ let myWatchlist = JSON.parse(localStorage.getItem("movies"));
 checkTheme();
 
 // check if there is movie in the watchlist
-if (myWatchlist) {
+if (myWatchlist && myWatchlist.length != 0) {
   infoDiv.style.display = "none";
   render();
 }
@@ -84,6 +84,10 @@ function render() {
     // change add to watchlist icon in dark mode
     if (localStorage.theme === "dark") {
       let minusIcon = document.getElementsByClassName("minus-icon");
+      let plusIconWhite = document.getElementById("plus-icon");
+
+      plusIconWhite.setAttribute("src", "/plusIconWhite.png");
+
       Array.from(minusIcon).forEach((icon) => {
         icon.setAttribute("src", "/minuIconWhite.png");
       });
