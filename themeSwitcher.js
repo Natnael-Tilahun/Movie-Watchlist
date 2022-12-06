@@ -9,12 +9,12 @@ function checkTheme() {
   // On page load or when changing themes, best to add inline in `head` to avoid FOUC
   if (localStorage.theme === "dark") {
     document.documentElement.classList.add("dark");
-    nightModeIcon.classList.remove("hidden");
-    lightModeIcon.classList.add("hidden");
-  } else {
-    document.documentElement.classList.remove("dark");
     lightModeIcon.classList.remove("hidden");
     nightModeIcon.classList.add("hidden");
+  } else {
+    document.documentElement.classList.remove("dark");
+    nightModeIcon.classList.remove("hidden");
+    lightModeIcon.classList.add("hidden");
   }
 }
 
