@@ -67,7 +67,7 @@ function renderMovie(data) {
               >
                 <p>${Runtime}</p>
                 <p>${Genre}</p>
-                <a href="/watchlist.html" class="flex" id="add-to-watchlist-btn">
+                <a href="/pages/watchlist.html" class="flex" id="add-to-watchlist-btn">
                   <img
                     src="../plusIconCircle.png"
                     id="plus-icon"
